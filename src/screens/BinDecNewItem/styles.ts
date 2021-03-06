@@ -54,3 +54,9 @@ export const ButtonFinish = styled.Pressable`
   background: ${theme.colors.red};
   color: ${theme.colors.white};
 `
+export const ErrorText = styled.Text`
+  color: ${theme.colors.red};
+  padding: 0 15px;
+  font-size: 17px;
+  color: ${theme.colors.red};
+`

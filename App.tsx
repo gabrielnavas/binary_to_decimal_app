@@ -28,7 +28,7 @@ export default function App () {
         />
          <Stack.Screen
           options={{
-            title: 'What do you need?',
+            title: 'Input de binary',
             headerTitleAlign: 'center',
             headerTintColor: theme.colors.white,
             headerStyle: {
