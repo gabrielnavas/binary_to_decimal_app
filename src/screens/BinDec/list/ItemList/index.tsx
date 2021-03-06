@@ -2,7 +2,8 @@ import React from 'react'
 import { GestureResponderEvent } from 'react-native'
 
 import Ionicons from 'react-native-vector-icons/Ionicons'
-import theme from '../../../styles/theme'
+
+import theme from '../../../../styles/theme'
 
 import {
   Container,
@@ -24,7 +25,11 @@ const ItemList = (props: Props) => {
       onLongPress={props.onLongPress}
     >
       <BinaryText>{props.binary}</BinaryText>
-      <Ionicons name='arrow-forward-outline' size={24} color={theme.colors.white} />
+      <Ionicons
+        name='arrow-forward-outline'
+        size={24}
+        color={theme.colors.white}
+      />
       <DecimalText>{props.decimal}</DecimalText>
     </Container>
   )

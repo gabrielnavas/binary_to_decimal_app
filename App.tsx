@@ -4,8 +4,8 @@ import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 
-import BinDecListScreen from './src/screens/BinDecList'
-import BinDecNewOrEditScreen from './src/screens/BinDecNewItem'
+import BinDecListScreen from './src/screens/BinDec/list'
+import BinDecNewOrEditScreen from './src/screens/BinDec/new-or-edit-item'
 import theme from './src/styles/theme'
 
 const Stack = createStackNavigator()

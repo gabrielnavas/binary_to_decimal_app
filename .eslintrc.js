@@ -20,5 +20,6 @@ module.exports = {
     '@typescript-eslint'
   ],
   rules: {
+    'no-useless-catch': 'off'
   }
 }
