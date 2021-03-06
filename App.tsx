@@ -3,7 +3,9 @@ import React from 'react'
 
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
+
 import BinDecListScreen from './src/screens/BinDecList'
+import BinDecNewOrEditScreen from './src/screens/BinDecNewItem'
 import theme from './src/styles/theme'
 
 const Stack = createStackNavigator()
@@ -23,6 +25,18 @@ export default function App () {
           }}
           name="BinDecListScreen"
           component={BinDecListScreen}
+        />
+         <Stack.Screen
+          options={{
+            title: 'What do you need?',
+            headerTitleAlign: 'center',
+            headerTintColor: theme.colors.white,
+            headerStyle: {
+              backgroundColor: theme.colors.blueDark
+            }
+          }}
+          name="BinDecNewOrEditScreen"
+          component={BinDecNewOrEditScreen}
         />
       </Stack.Navigator>
     </NavigationContainer>

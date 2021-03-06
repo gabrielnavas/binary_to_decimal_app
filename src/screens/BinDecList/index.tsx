@@ -21,7 +21,7 @@ type Props = {
 
 const BinDecListScreen = ({ navigation }: Props) => {
   const handleNew = useCallback(() => {
-    alert('to new binary to decinal item')
+    navigation.navigate('BinDecNewOrEditScreen')
   }, [])
 
   const handleEdit = useCallback(() => {
