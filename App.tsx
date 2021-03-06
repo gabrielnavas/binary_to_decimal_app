@@ -1,21 +1,30 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+// eslint-disable-next-line no-use-before-define
+import React from 'react'
 
-export default function App() {
+import { NavigationContainer } from '@react-navigation/native'
+import { createStackNavigator } from '@react-navigation/stack'
+import BinDecListScreen from './src/screens/BinDecList'
+import theme from './src/styles/theme'
+
+const Stack = createStackNavigator()
+
+export default function App () {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          options={{
+            title: 'Binary to Decimal',
+            headerTitleAlign: 'center',
+            headerTintColor: theme.colors.white,
+            headerStyle: {
+              backgroundColor: theme.colors.blueDark
+            }
+          }}
+          name="BinDecListScreen"
+          component={BinDecListScreen}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
+  )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
