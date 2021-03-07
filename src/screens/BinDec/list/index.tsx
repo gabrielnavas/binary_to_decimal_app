@@ -38,10 +38,6 @@ const BinDecListScreen = ({ navigation }: Props) => {
     navigation.navigate('BinDecNewOrEditScreen', { actionType: 'edit', itemEdit })
   }, [])
 
-  const handleDelete = React.useCallback((idToItemRemove: string) => {
-    deleteOne(idToItemRemove)
-  }, [])
-
   return (
    <Container>
      <Body>
@@ -50,8 +46,8 @@ const BinDecListScreen = ({ navigation }: Props) => {
           list.map((item, index) =>
             <ItemList
               key={index}
-              onPress={() => handleEdit(item)}
-              onLongPress={() => handleDelete(item.id)}
+              idItemToDelete={item.id}
+              editAction={() => handleEdit(item)}
               binary={item.binary}
               decimal={item.decimal} />)
         }

@@ -57,7 +57,6 @@ const BinDecNewOrEditScreen = (props: Props) => {
       binary: binary.trim(),
       decimal: decimal.trim()
     } as Item
-    console.log(item)
 
     if (item.decimal.length === 0 || item.binary.length === 0) {
       return handleError('Decimal or binary is empty')
